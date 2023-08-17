@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .container-fluid {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(shot-by-joe-ycYM1-YwcuI-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0px solid black;
+      }
+      .container {
+        /* height: 400px; */
+        padding: 40px 80px;
+        /* width: 500px; */
+        background-color: rgba(65, 62, 65, 0.5);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background: transparent; */
+        border-radius: 12px;
+      }
+      .i1 {
+        height: 28px;
+        width: 350px;
+        border: 0px solid black;
+        border-radius: 6px;
+        padding: 25px;
+        outline: none;
+        margin: 2px 35px;
+      }
+      .i2 {
+        height: 28px;
+        width: 350px;
+        border: 0px solid black;
+        border-radius: 6px;
+        padding: 25px;
+        outline: none;
+        margin: 2px 35px;
+      }
+      .i3 {
+        height: 28px;
+        /* width: 770px; */
+        width: 350px;
+        border: 0px solid black;
+        border-radius: 6px;
+        padding: 25px;
+        outline: none;
+        margin: 2px 35px;
+      }
+      .l1 {
+        height: 55px;
+        text-align: left;
+      }
+      span {
+        color: white;
+        /* background-color: white; */
+        border-radius: 6px;
+        padding: 3px;
+      }
+      h1 {
+        color: rgb(8, 8, 60);
+      }
+      .fsname {
+        display: flex;
+        flex-direction: column;
+      }
+      p {
+        margin-top: 15px;
+      }
+      button {
+        padding: 10px 25px;
+        border: 0px solid black;
+        border-radius: 6px;
+        font-weight: 700;
+        cursor: pointer;
+        margin-top: 28px;
+      }
+      button:hover {
+        background-color: rgb(8, 8, 60);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="l1">
+          <h1><span>sign</span>up</h1>
+        </div>
+        <div class="lord">
+          <lord-icon
+            src="https://cdn.lordicon.com/hbvyhtse.json"
+            trigger="hover"
+            colors="primary:#121331"
+            style="width: 35px; height: 56px; margin: 2.5px"
+          >
+          </lord-icon>
+        </div>
+        <p style="color: rgb(8, 8, 60); font-size: 12px">
+          (*) it's mandatory to fill the information regards it.
+        </p>
+        <br />
+        <div class="fsname">
+          <input type="text" class="i1" placeholder="FirstName*" />
+          <input type="text" class="i2" placeholder="LastName*" />
+        </div>
+        <br />
+        <div class="fsname">
+          <input
+            type="text"
+            class="i3"
+            placeholder="Phone No or Email Address*"
+          />
+          <input type="text" class="i1" placeholder="Nationality*" />
+          <input type="date" class="i2" style="color: gray" />
+        </div>
+        <br />
+        <div class="fsname">
+          <input type="text" class="i3" placeholder="Employee-Id*" />
+          <input type="password" class="i2" placeholder="Password*" />
+        </div>
+        <div class="btn">
+          <button>Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+  </body>
+</html>

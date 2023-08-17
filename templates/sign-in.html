@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log-in</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .container-fluid {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(shot-by-joe-ycYM1-YwcuI-unsplash.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0px solid black;
+      }
+      .container {
+        height: 400px;
+        width: 500px;
+        background-color: rgba(65, 62, 65, 0.5);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* background: transparent; */
+        border-radius: 12px;
+      }
+      .i1 {
+        height: 28px;
+        width: 280px;
+        border: 0px solid black;
+        border-radius: 6px;
+        padding: 25px;
+        outline: none;
+      }
+      .i2 {
+        height: 28px;
+        width: 280px;
+        border: 0px solid black;
+        border-radius: 6px;
+        padding: 25px;
+        outline: none;
+      }
+      .l1 {
+        height: 55px;
+        text-align: left;
+      }
+      span {
+        color: white;
+        /* background-color: white; */
+        border-radius: 6px;
+        padding: 3px;
+      }
+      h1 {
+        color: rgb(66, 29, 29);
+      }
+      button {
+        padding: 10px 25px;
+        border: 0px solid black;
+        border-radius: 6px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:hover {
+        color: white;
+        background-color: rgb(8, 8, 60);
+      }
+      span.lol {
+        color: rgb(66, 29, 29);
+      }
+      p.p1 {
+        font-size: 10px;
+        color: black;
+      }
+      p.p2 {
+        font-size: 10px;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="l1">
+          <h1><span>Log</span>in</h1>
+        </div>
+        <div class="input1">
+          <div class="lord">
+            <lord-icon
+              src="https://cdn.lordicon.com/hbvyhtse.json"
+              trigger="hover"
+              colors="primary:#121331"
+              style="width: 35px; height: 56px; margin: 2.5px"
+            >
+            </lord-icon>
+          </div>
+          <input
+            class="i1"
+            type="text"
+            placeholder="Enter Username or Email Id"
+          />
+        </div>
+        <br />
+        <div class="input2">
+          <input class="i2" type="text" placeholder="Enter Password" />
+        </div>
+        <br />
+        <div class="btn">
+          <button>Log<span class="lol">in</span></button>
+        </div>
+        <br />
+        <div>
+          <p class="p1">Forget <a href="ForgetPassword.html">Password?</a></p>
+          <p class="p2">
+            Don't have an account? <a href="sign-up.html">Sign-up?</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
+  </body>
+</html>
