@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # Authentication.
     path('Auth/', include('Authentication_App.urls'))
+    #
 ]

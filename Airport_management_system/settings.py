@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Externally Installed Apps.
     'Authentication_App',
+    'Flights'
 ]
 
 MIDDLEWARE = [
