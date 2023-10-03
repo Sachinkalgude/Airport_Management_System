@@ -1,9 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <style>
       * {
         padding: 0;
@@ -17,16 +24,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(shot-by-joe-ycYM1-YwcuI-unsplash.jpg);
+        background-image: url("/static/img4.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         border: 0px solid black;
       }
       .container {
-        /* height: 400px; */
+        height: 800;
         padding: 40px 80px;
-        /* width: 500px; */
-        background-color: rgba(65, 62, 65, 0.5);
+        width: 700px;
+        background-color: rgba(65, 62, 65, 0.3);
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -35,65 +42,50 @@
         /* background: transparent; */
         border-radius: 12px;
       }
-      .i1 {
-        height: 28px;
-        width: 350px;
-        border: 0px solid black;
-        border-radius: 6px;
-        padding: 25px;
-        outline: none;
-        margin: 2px 35px;
-      }
-      .i2 {
-        height: 28px;
-        width: 350px;
-        border: 0px solid black;
-        border-radius: 6px;
-        padding: 25px;
-        outline: none;
-        margin: 2px 35px;
-      }
-      .i3 {
-        height: 28px;
-        /* width: 770px; */
-        width: 350px;
-        border: 0px solid black;
-        border-radius: 6px;
-        padding: 25px;
-        outline: none;
-        margin: 2px 35px;
-      }
-      .l1 {
-        height: 55px;
-        text-align: left;
-      }
-      span {
-        color: white;
-        /* background-color: white; */
-        border-radius: 6px;
-        padding: 3px;
-      }
       h1 {
-        color: rgb(8, 8, 60);
+        text-align: center;
       }
-      .fsname {
-        display: flex;
-        flex-direction: column;
+      input {
+        margin: 10px 0px;
       }
-      p {
-        margin-top: 15px;
-      }
-      button {
+      .btn {
         padding: 10px 25px;
         border: 0px solid black;
         border-radius: 6px;
         font-weight: 700;
         cursor: pointer;
         margin-top: 28px;
+        background-color: white;
+        color: black;
       }
-      button:hover {
+      .btn:hover {
         background-color: rgb(8, 8, 60);
         color: white;
+      }
+      .form-control {
+        width: 500px;
+        border-radius: 15px;
+      }
+      .pa {
+        padding: 4px;
+        border: 0px solid;
+        border-radius: 6px;
+      }
+      .m-2 {
+        border-radius: 13px;
+        /* padding: 0px 60px; */
+      }
+      p.text-start {
+        padding: 0px 9px;
+      }
+      span.p-1 {
+        border-radius: 10px;
+        color: #495057;
+        background-color: #fff;
+      }
+      p.text-start {
+        margin-bottom: 9px;
+        padding: 1px;
       }
     </style>
   </head>
@@ -101,45 +93,48 @@
     <div class="container-fluid">
       <div class="container">
         <div class="l1">
-          <h1><span>sign</span>up</h1>
+          <h1 style="color: white"><span>sign</span>up</h1>
         </div>
-        <div class="lord">
+        <div class="lord text-center">
           <lord-icon
             src="https://cdn.lordicon.com/hbvyhtse.json"
             trigger="hover"
-            colors="primary:#121331"
+            colors="primary:#ffffff"
             style="width: 35px; height: 56px; margin: 2.5px"
           >
           </lord-icon>
         </div>
-        <p style="color: rgb(8, 8, 60); font-size: 12px">
+        <p class="text-center" style="color: white; font-size: 12px">
           (*) it's mandatory to fill the information regards it.
         </p>
         <br />
-        <div class="fsname">
-          <input type="text" class="i1" placeholder="FirstName*" />
-          <input type="text" class="i2" placeholder="LastName*" />
-        </div>
-        <br />
-        <div class="fsname">
-          <input
-            type="text"
-            class="i3"
-            placeholder="Phone No or Email Address*"
-          />
-          <input type="text" class="i1" placeholder="Nationality*" />
-          <input type="date" class="i2" style="color: gray" />
-        </div>
-        <br />
-        <div class="fsname">
-          <input type="text" class="i3" placeholder="Employee-Id*" />
-          <input type="password" class="i2" placeholder="Password*" />
-        </div>
-        <div class="btn">
-          <button>Sign Up</button>
-        </div>
+        <form action="" method="POST" class="t">
+          {% csrf_token %}
+          <div>{{fm.email}}</div>
+          <div>{{fm.Type}}</div>
+          <div>{{fm.first_name}}</div>
+          <div>{{fm.Middle_name}}</div>
+          <div>{{fm.last_name}}</div>
+          <div class="">
+            <p class="text-start text-light" style="font-size: 15px">
+              <span class="bg-light p-1 mb-1">Date Of Birth :</span>
+              {{fm.Date_of_birth}}
+            </p>
+          </div>
+          <div>{{fm.nationality}}</div>
+          <div>{{fm.Where_do_you_live}}</div>
+          <div>{{fm.password1}}</div>
+          <div>{{fm.password2}}</div>
+          <button class="btn" type="submit">Sign-Up</button>
+        </form>
       </div>
     </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
   </body>
 </html>

@@ -1,15 +1,22 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Log-in</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        font-family: sans-serif;
+        {% comment %} font-family: sans-serif; {% endcomment %}
       }
       .container-fluid {
         height: 100vh;
@@ -17,15 +24,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url(shot-by-joe-ycYM1-YwcuI-unsplash.jpg);
+        background-image: url("/static/img4.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         border: 0px solid black;
       }
       .container {
-        height: 400px;
-        width: 500px;
-        background-color: rgba(65, 62, 65, 0.5);
+        height: 524px;
+        width: 615px;
+        background-color: rgba(65, 62, 65, 0.3);
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -61,7 +68,7 @@
         padding: 3px;
       }
       h1 {
-        color: rgb(66, 29, 29);
+        color: white;
       }
       button {
         padding: 10px 25px;
@@ -69,21 +76,23 @@
         border-radius: 6px;
         font-weight: 700;
         cursor: pointer;
+        background-color: rgb(8, 8, 60);
+        color: white;
       }
       button:hover {
-        color: white;
-        background-color: rgb(8, 8, 60);
+        color: rgb(8, 8, 60);
+        background-color: white;
       }
       span.lol {
         color: rgb(66, 29, 29);
       }
       p.p1 {
-        font-size: 10px;
-        color: black;
+        font-size: 12px;
+        color: white;
       }
       p.p2 {
-        font-size: 10px;
-        color: black;
+        font-size: 12px;
+        color: white;
       }
     </style>
   </head>
@@ -91,32 +100,32 @@
     <div class="container-fluid">
       <div class="container">
         <div class="l1">
-          <h1><span>Log</span>in</h1>
+          <h1>Login</h1>
         </div>
         <div class="input1">
           <div class="lord">
             <lord-icon
               src="https://cdn.lordicon.com/hbvyhtse.json"
               trigger="hover"
-              colors="primary:#121331"
+              colors="primary:#ffffff"
               style="width: 35px; height: 56px; margin: 2.5px"
             >
             </lord-icon>
           </div>
-          <input
-            class="i1"
-            type="text"
-            placeholder="Enter Username or Email Id"
-          />
-        </div>
-        <br />
-        <div class="input2">
-          <input class="i2" type="text" placeholder="Enter Password" />
-        </div>
-        <br />
-        <div class="btn">
-          <button>Log<span class="lol">in</span></button>
-        </div>
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+              {% comment %} <label for="exampleInputEmail1" class="form-label">Email address</label> {% endcomment %}
+              <input type="email" name='username' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder='Username'>
+              {% comment %} here you have to see what actuallly happen inside html template in inspect.thats why here we use name it directly inherit our bydefault authentication form field. {% endcomment %}
+              <div id="emailHelp" class="form-text text-light">*We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              {% comment %} <label for="exampleInputPassword1" class="form-label">Password</label> {% endcomment %}
+              <input type="password" name='password' class="form-control" id="exampleInputPassword1" placeholder='Password'>
+            </div>
+            <button type="submit">Login</button>
+          </form>
         <br />
         <div>
           <p class="p1">Forget <a href="ForgetPassword.html">Password?</a></p>
@@ -127,6 +136,5 @@
       </div>
     </div>
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-    <!-- <a href="https://lordicon.com/">Icons by Lordicon.com</a> -->
   </body>
 </html>
