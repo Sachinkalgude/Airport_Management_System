@@ -1,0 +1,128 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block body %}
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+    crossorigin="anonymous"
+    />
+
+    <div><h1 class="text-center" style="color: #1a314f; font-size: 50px;">Business</h1></div>
+    <section style="padding: 80px 0; background-color: aliceblue;">
+        <div class="hm-section _mPS2id-t mPS2id-target" id="cargo">
+            <div class="container-fluid">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-6 ps-5">
+                        <h2 class="section-title">Cargo</h2>
+                        <p>Here, we are well equipped to meet your needs related to smooth cargo handling at our modern facility. Our Cargo Business portfolio includes:</p>
+                        <ul class="list-style">
+                            <li>E2E Integrated Logistics Services: Airports</li>
+                            <li>Cargo Terminals at Airports</li>
+                            <li>Cargo Village</li>
+                            <li>Trans-shipment hubs</li>
+                            <li>E-Commerce facility</li>
+                            <li>Bonded Road feeder services</li>
+                            <li>Air Freight Stations</li>
+                            <li>Air Cargo Logistics Park</li>
+                        </ul> 
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bussSlide">					
+                            <img src="{% static 'business_img/cargo.jpg'%}" class ='img-responsive w-75' alt="" 
+                            style="border-radius: 15px; filter: drop-shadow(4px 4px 6px black);">
+                        </div>					
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" >
+        <div class="hm-section white-bg _mPS2id-t mPS2id-target" id="airlines">
+            <div class="container-fluid">
+                <div class="row swap-colmn d-flex justify-content-around">				
+                    <div class="col-lg-6">
+                        <div class="bussSlide lhs">
+                            <img src="{% static 'business_img/airlines.jpg'%}" class ='img-responsive w-75 h-75 ps-5' alt="" 
+                            style="border-radius: 15px; filter: drop-shadow(4px 4px 6px black);">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 py-5 pe-5">
+                        <h2 class="section-title">Airlines</h2>
+                        
+                        <p>Our Aero Commercial Team is committed to make our Airline Partners succeed and grow their network at one of the busiest hubs of India and connect it to the World.</p>
+                        <p>Its geographical location offers seamless connectivity to India and the world. Every year it handles over 48 million passengers and over 900 thousand metric tonnes of air cargo, 
+                            serving more than 50 airlines and connecting passengers to more than 100 destinations worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background-color: aliceblue;">
+        <div class="hm-section _mPS2id-t" id="commercial">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 py-5 ps-5">
+                        <h2 class="section-title">Commercial</h2>
+                        <p>Explore opportunity to showcase your brand, products and services in OOH, Retail, Food &amp; Beverage, Duty Free and Passenger Experience Services at Mumbai Airport. </p>
+                        <p>As the business and creative epicentre of India, CSMIA is dedicated to create distinctiveness with art, culture, cuisine and a curated retail offering that places innovation at the forefront,
+                             while transforming lives based on our philosophy of ‘Growth with Goodness’.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bussSlide">	
+                            <img src="{% static 'business_img/commercial.jpg'%}" class ='img-responsive h-75 ps-5' alt="" 
+                            style="border-radius: 15px; filter: drop-shadow(4px 4px 6px black); width: 80%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section style="padding: 80px 0;">
+        <div class="hm-section _mPS2id-t" id="commercial">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="bussSlide">	
+                            <img src="{% static 'business_img/general.jpg'%}" class ='img-responsive h-75 ps-5' alt="" 
+                            style="border-radius: 15px; filter: drop-shadow(4px 4px 6px black); width: 80%;">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 py-5 pe-5">
+                        <h2 class="section-title">General Aviation</h2>
+                        <p>From our state-of-the-art facility at Mumbai International Airport, the Corporate Terminal provides passengers with specialized and tailored services to accommodate VIP, CIP, Diplomats and Medical Evacuation flights.</p>
+                        <p>The GA terminal is all set to welcome passengers with luxurious interiors accentuated with height, light and space. Guests are warmly welcomed at the resplendent reception area by attentive and friendly staff on call 24 X 7, the terminal offers expansive lounges with butler service all complemented with a curated menu of super-food lite bites,
+                             a stylish bar to global cuisine served via a buffet and as per an a la carté menu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background-color: aliceblue;">
+        <div class="hm-section _mPS2id-t" id="commercial">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 py-5 ps-5">
+                        <h2 class="section-title">Tenders</h2>
+                        <p>Are you a supplier for Goods or Services? Engage with us in developing world class airports and join our journey for Gateway to Goodness.</p>
+                        <p>As the business and creative epicentre of India, CSMIA is dedicated to create distinctiveness with art, culture, cuisine and a curated retail offering that places innovation at the forefront,
+                             while transforming lives based on our philosophy of ‘Growth with Goodness’.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="bussSlide">	
+                            <img src="{% static 'business_img/tenders.jpg'%}" class ='img-responsive h-75 ps-5' alt="" 
+                            style="border-radius: 15px; filter: drop-shadow(4px 4px 6px black); width: 80%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}
