@@ -4,15 +4,15 @@ from django.db import models
 
 
 class Flights(models.Model):
-    Flight_no = models.CharField(max_length=20,primary_key=True, unique=True)
+    Flight_no = models.CharField(max_length=20, primary_key=True, unique=True)
     Airline_name = models.CharField(max_length=50)
     no_of_seats = models.IntegerField()
     Base = models.CharField(max_length=50)
     Base_code = models.CharField(max_length=50)
     Destination = models.CharField(max_length=50)
     Destination_code = models.CharField(max_length=50)
-    Arrival_time = models.DateTimeField(auto_now=True)
-    Departure_time = models.DateTimeField(auto_now_add=True)
+    Arrival_time = models.DateTimeField()
+    Departure_time = models.DateTimeField()
     Flight_price = models.IntegerField()
 
     def __str__(self):

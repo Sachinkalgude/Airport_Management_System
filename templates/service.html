@@ -1,78 +1,135 @@
-{% load static %}
-{% extends "base.html" %}
-{% block body %}
+{% load static %} {% extends "base.html" %} {% block body %}
 
 <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-    crossorigin="anonymous"
-  />
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="airport-service">
-                <div class="row loadMore-row">
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="pranaam-services.aspx">
-                            <div class="sblock-inner"> 
-                                <img src="{% static 'services_img/img1.jpg' %}" alt="Pranaam | Adani Guest Services">
-                            </div>
-                            </a> </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="lounges.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img2.jpg' %}" alt="Lounges">
-                                
-                            </div>
-                            </a> </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="airline-ticketing-counters.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img3.jpg' %}" alt="Airline Ticketing Counters">
-                                
-                            </div>
-                            </a> </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="information-desk.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img4.jpg' %}" alt="Information Desk">
-                                
-                            </div>
-                            </a> </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="special-assistance-facility.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img5.jpg' %}" alt="Special Assistance Facility">
-                                
-                            </div>
-                            </a> </div>
-                    </div>
-            
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="visitors-entry.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img6.jpg' %}" alt="Visitors Entry">
-                                
-                            </div>
-                            </a> </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="lost-luggage.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img7.jpg' %}" alt="Lost and Found">
-                                
-                            </div>
-                            </a> </div>
-                    </div>
-            
-                    <div class="col-md-6 col-lg-4 col-xl-3 loadMore-item" style="display: block;">
-                        <div class="service-block"> <a href="wi-fi-facility.aspx">
-                            <div class="sblock-inner"> <img src="{% static 'services_img/img8.jpg' %}" alt="Wi-fi">   
-                            </div>
-                            </a> </div>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="airport-service">
+      <div class="row loadMore-row">
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="pranaam-services.aspx">
+              <div class="sblock-inner">
+                <img
+                  src="{% static 'services_img/img1.jpg' %}"
+                  alt="Pranaam | Adani Guest Services"
+                />
+              </div>
+            </a>
+          </div>
         </div>
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="lounges.aspx">
+              <div class="sblock-inner">
+                <img src="{% static 'services_img/img2.jpg' %}" alt="Lounges" />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="airline-ticketing-counters.aspx">
+              <div class="sblock-inner">
+                <img
+                  src="{% static 'services_img/img3.jpg' %}"
+                  alt="Airline Ticketing Counters"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="information-desk.aspx">
+              <div class="sblock-inner">
+                <img
+                  src="{% static 'services_img/img4.jpg' %}"
+                  alt="Information Desk"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="special-assistance-facility.aspx">
+              <div class="sblock-inner">
+                <img
+                  src="{% static 'services_img/img5.jpg' %}"
+                  alt="Special Assistance Facility"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="visitors-entry.aspx">
+              <div class="sblock-inner">
+                <img
+                  src="{% static 'services_img/img6.jpg' %}"
+                  alt="Visitors Entry"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="lost-luggage.aspx">
+              <div class="sblock-inner">
+                <img
+                  src="{% static 'services_img/img7.jpg' %}"
+                  alt="Lost and Found"
+                />
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="col-md-6 col-lg-4 col-xl-3 loadMore-item"
+          style="display: block"
+        >
+          <div class="service-block">
+            <a href="wi-fi-facility.aspx">
+              <div class="sblock-inner">
+                <img src="{% static 'services_img/img8.jpg' %}" alt="Wi-fi" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
 {% endblock body %}
