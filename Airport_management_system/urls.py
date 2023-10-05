@@ -22,5 +22,5 @@ urlpatterns = [
     # Authentication.
     path('Auth/', include('Authentication_App.urls')),
     # Flights.
-    path('Flights/', include('Flights.urls'))
+    path('', include('Flights.urls'))
 ]

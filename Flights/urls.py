@@ -3,9 +3,9 @@ from .views import passenger_data, passenger_data_update, Delete, show_flights_f
 
 
 urlpatterns = [
-    path('', passenger_data, name='home'),
+    path('passenger_data/', passenger_data, name='home'),
     path('update/<int:id>/', passenger_data_update, name='update'),
     path('delete/<int:id>/', Delete, name='delete'),
     # testing
-    path('index/', show_flights_fields),
+    path('', show_flights_fields),
 ]
