@@ -36,7 +36,7 @@ class show_passengers_data(forms.ModelForm):
     class Meta:
         model = passengers
         fields = ['First_name', 'Last_name', 'DOB', 'Gender', 'Email',
-                  'Phone_no', 'Nationality', 'Flight_no', 'Flight_from', 'Flight_to']
+                  'Phone_no', 'Nationality', 'Flight_no', 'Flight_from', 'Flight_to','booking_id']
         widgets = {
             'First_name': forms.TextInput(attrs={'class': 'form-control', }),
             'Last_name': forms.TextInput(attrs={'class': 'form-control'}),
@@ -48,4 +48,5 @@ class show_passengers_data(forms.ModelForm):
             'Flight_no': forms.Select(attrs={'class': 'form-control'}),
             'Flight_from': forms.TextInput(attrs={'class': 'form-control'}),
             'Flight_to': forms.TextInput(attrs={'class': 'form-control'}),
+            'booking_id' : forms.TextInput(attrs={'class':'form-control'}),
         }

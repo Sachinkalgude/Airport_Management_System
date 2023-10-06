@@ -1,5 +1,12 @@
 from django.urls import path
-from .views import show_flights_fields, flight_show, search_Flights
+from .views import (
+        show_flights_fields, 
+        flight_show, 
+        search_Flights,
+        business_page,
+        service_page,
+        all_profile,
+    )
 
 
 urlpatterns = [
@@ -8,6 +15,14 @@ urlpatterns = [
     # path('delete/<int:id>/', Delete, name='delete'),
     # testing
     path('', show_flights_fields, name='main'),
+    # all flights
     path('all_flights/', flight_show, name='show_db_Flights'),
-    path('search_flights/', search_Flights, name='search')
+    #search page
+    path('search_flights/', search_Flights, name='search'),
+    # business page
+    path('business_page/',business_page,name='businesspage'),
+    # service page
+    path('service_page/',service_page,name='servicepage'),
+    # profile page
+    path('profile/',all_profile,name='allprofile'),
 ]

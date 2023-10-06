@@ -30,6 +30,7 @@ class passengers(models.Model):
     Flight_no = models.ForeignKey(Flights, on_delete=models.CASCADE)
     Flight_from = models.CharField(max_length=50)
     Flight_to = models.CharField(max_length=50)
+    booking_id = models.CharField(max_length=20)
 
     is_active = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now=True)

@@ -65,3 +65,16 @@ def search_Flights(request):
 #         model_.save()
 #         model_.delete()
 #         return redirect('home')
+
+# business page render
+def business_page(request):
+    return render(request,'business.html')
+
+# service page render
+def service_page(request):
+    return render(request,'service.html')
+
+# all profile
+def all_profile(request):
+    data = passengers.objects.all()
+    return render(request,'profile.html',{'data':data})
