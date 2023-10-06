@@ -11,7 +11,7 @@ class Flights(models.Model):
     Base_code = models.CharField(max_length=50)
     Destination = models.CharField(max_length=50)
     Destination_code = models.CharField(max_length=50)
-    Arrival_time = models.DateTimeField()
+    Arrival_time = models.DateTimeField(verbose_name='Return')
     Departure_time = models.DateTimeField()
     Flight_price = models.IntegerField()
 

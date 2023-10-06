@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% load static %} {% block body %}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+  crossorigin="anonymous"
+/>
+{% if fg %}
+<table class="table table-secondary table-striped my-5">
+  <thead>
+    <tr>
+      <th scope="col">Flight_no</th>
+      <th scope="col">Airline_name</th>
+      <th scope="col">no_of_seats</th>
+      <th scope="col">Base</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Arrival_time</th>
+      <th scope="col">Departure_time</th>
+      <th scope="col">Flight_price</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for st in fg %}
+    <tr>
+      <td>{{st.Flight_no}}</td>
+      <td>{{st.Airline_name}}</td>
+      <td>{{st.no_of_seats}}</td>
+      <td>{{st.Base}}</td>
+      <td>{{st.Destination}}</td>
+      <td>{{st.Departure_time}}</td>
+      <td>{{st.Arrival_time}}</td>
+      <td>{{st.Flight_price}}</td>
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}{% endblock body%}

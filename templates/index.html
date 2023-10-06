@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block body %}
+{% extends "base.html" %} {% block body %} {% load static %}
 <link
   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
   rel="stylesheet"
@@ -6,14 +6,15 @@
   crossorigin="anonymous"
 />
 
-<div class="container-fluid m-5 p-5">
+<div class="container-fluid">
   <img
     src="{% static 'index_img/air.jpg' %}"
     alt=""
     srcset=""
-    class="h-50 w-100 position-relative img-fluid"
+    class="img-fluid position-relative"
+    style="width: 100%; height: 600px"
   />
-  <div class="container position-absolute top-0 start-0 m-5">
+  <div class="container position-absolute top-50 start-0 ms-5">
     <h1 class="fw-semibold">COMFORT by your side</h1>
     <p class="fw-medium">Book a preferred seat next to you</p>
     <button class="fw-semibold">LEARN MORE</button>
@@ -22,7 +23,20 @@
 </div>
 <div class="container border border-dark border-1 rounded-4 p-2">
   <p class="fw-medium">Book a Flight</p>
-  <form action="" method="GET">{{fs.Base}}{{fs.Destination}}</form>
+  <form action="" method="POST">
+    {% csrf_token %} {{fs.Base}}{{fs.Destination}}
+    <div
+      class="custom-css-control border border-1 border-dark w-25 rounded-4 p-1"
+    >
+      Depart : {{fs.Departure_time}}
+    </div>
+    <div
+      class="custom-css-control border border-1 border-dark w-25 rounded-4 p-1"
+    >
+      Return : {{fs.Arrival_time}}
+    </div>
+    <button type="submit" class="btn btn-success">Search</button>
+  </form>
 </div>
 <!-- 2nd -->
 <div class="sectionTitle aem-GridColumn aem-GridColumn--default--12">
@@ -34,134 +48,114 @@
     </p>
   </div>
   <br />
-  <div
-    class="container cardImage text aem-GridColumn aem-GridColumn--default--12"
-  >
-    <div class="card-grid card-carousel-wrapper hmPreparetoTravel">
-      <div class="card">
+  <div class="container cardImage text">
+    <div class="card">
+      <div class="card d-flex">
         <img
-          class="card-img-top main-img child ls-is-cached lazyloaded"
+          class="card h-25 w-25"
           data-src="/adobe/dynamicmedia/deliver/dm-aid--cf91b67c-2b45-4cbe-8ed0-7e2de50c897a/generous-baggage-rules.webp"
           alt="Baggage"
           title="Baggage"
-          width="100%"
-          height="100%"
-          src="/adobe/dynamicmedia/deliver/dm-aid--cf91b67c-2b45-4cbe-8ed0-7e2de50c897a/generous-baggage-rules.webp"
+          src="{% static 'index_img/airport-services.jpg' %}"
         />
-      </div>
-
-      <div class="card">
         <img
-          class="card-img-top main-img child ls-is-cached lazyloaded"
+          class="card-img-top main-img child ls-is-cached lazyloaded h-25 w-25"
           data-src="/adobe/dynamicmedia/deliver/dm-aid--c3f8b9d2-4542-416a-b753-2f18c9e4dca3/before-you-fly.webp"
           alt="Essential Travel Requirements"
           title="Essential Travel Requirements"
-          width="100%"
-          height="100%"
-          src="/adobe/dynamicmedia/deliver/dm-aid--c3f8b9d2-4542-416a-b753-2f18c9e4dca3/before-you-fly.webp"
+          src="{% static 'index_img/fly-non-stop-image.webp' %}"
         />
-      </div>
-
-      <div class="card">
         <img
-          class="card-img-top main-img child ls-is-cached lazyloaded"
+          class="card-img-top main-img child ls-is-cached lazyloaded h-25 w-25"
           data-src="/adobe/dynamicmedia/deliver/dm-aid--cd2b6afe-8a61-4f91-b37a-b2652363d323/airport-information.webp"
           alt="Airport Information"
           title="Airport Information"
-          width="100%"
-          height="100%"
-          src="/adobe/dynamicmedia/deliver/dm-aid--cd2b6afe-8a61-4f91-b37a-b2652363d323/airport-information.webp"
+          src="{% static 'index_img/lounges.jpg' %}"
         />
       </div>
     </div>
-    <br />
   </div>
-</div>
-<br />
-<!-- 3rd -->
-<div class="covid-info container">
-  <div class="row">
-    <div class="col-lg-6 col-12">
-      <div class="info-item">
-        <h2 class="section-title">Covid-19 Information</h2>
-        <div class="information-card">
-          <aside class="informationcardimage">
-            <p class="covidInfoText">
-              The global COVID-19 pandemic has had a significant impact on the
-              way we live our lives, including how we travel by air.
-            </p>
-
-            <a href="notification.aspx" class="btn btn-primary"
-              >Know More<i class="clr-arrow"></i
-            ></a>
-          </aside>
-          <figure>
-            <img
-              src="/images/innerpage-banners/Covid_19_Information_Web.png"
-              alt="CSMIA"
-            />
-          </figure>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-6 col-12">
-      <div class="info-item">
-        <h2 class="section-title">State Wise Regulation</h2>
-        <div class="information-card">
-          <aside class="informationcardimage">
-            <p class="covidInfoText">
-              The global COVID-19 pandemic has had a significant impact on the
-              way we live our lives, including how we travel by air.
-            </p>
-
-            <a
-              href="https://www.adani.com/state-travel-guidelines"
-              class="btn btn-primary"
-              >Know More <i class="clr-arrow"></i
-            ></a>
-          </aside>
-          <figure>
-            <img
-              src="/images/innerpage-banners/State Wise Regulation_Web.png"
-              class="img-fluid"
-              alt="CSMIA"
-            />
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<br />
-<!-- 4th -->
-<div class="cardBanner aem-GridColumn aem-GridColumn--default--12">
-  <div class="cardBanner imgRight">
-    <div class="card">
-      <img
-        class="card-img-top main-img child lazyloaded"
-        data-src="/adobe/dynamicmedia/deliver/dm-aid--36c38bc9-fdca-4292-82ec-6ebb892afccd/fly-non-stop-image.webp"
-        alt="FLY NON-STOP"
-        title="FLY NON-STOP"
-        src="{% static '/static/index_img/fly-non-stop-image.webp' %}"
-      />
-      <div class="card-img-overlay">
-        <div class="container-bs">
-          <div class="row">
-            <div class="col-6 offset-6">
-              <h2 class="card-title">FLY</h2>
-              <h3 class="card-title">Nonstop</h3>
-              <p class="card-title">
-                Spend less time getting there, and more time being there. Our
-                nonstop network connects India with destinations in Asia,
-                Australia, Europe, Middle East, North America, and more
+  <br />
+  <!-- 3rd -->
+  <div class="covid-info container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="info-item">
+          <h2 class="section-title">Covid-19 Information</h2>
+          <div class="information-card">
+            <aside class="informationcardimage">
+              <p class="covidInfoText">
+                The global COVID-19 pandemic has had a significant impact on the
+                way we live our lives, including how we travel by air.
               </p>
-              <a
-                href="/in/en/destinations/non-stop-international-flights.html"
-                id="cardBannerLink"
-                class="learn-more-button"
-              >
-                Explore Routes
-              </a>
+
+              <a href="notification.aspx" class="btn btn-primary"
+                >Know More<i class="clr-arrow"></i
+              ></a>
+            </aside>
+            <figure>
+              <img
+                class="w-75 img-fluid"
+                src="{% static 'index_img/museum-tour.jpg' %}"
+                alt="CSMIA"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="info-item">
+          <h2 class="section-title">State Wise Regulation</h2>
+          <div class="information-card">
+            <aside class="informationcardimage">
+              <p class="covidInfoText">
+                The global COVID-19 pandemic has had a significant impact on the
+                way we live our lives, including how we travel by air.
+              </p>
+
+              <a href="" class="btn btn-primary"
+                >Know More <i class="clr-arrow"></i
+              ></a>
+            </aside>
+            <figure>
+              <img
+                src="{% static 'index_img/niranta-airport-transit-hotel.jpg' %}"
+                class="img-fluid w-75"
+                alt="CSMIA"
+              />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <!-- 4th -->
+  <div class="cardBanner aem-GridColumn aem-GridColumn--default--12">
+    <div class="cardBanner imgRight">
+      <div class="card">
+        <img
+          class="card-img-top main-img child lazyloaded"
+          data-src="/adobe/dynamicmedia/deliver/dm-aid--36c38bc9-fdca-4292-82ec-6ebb892afccd/fly-non-stop-image.webp"
+          alt="FLY NON-STOP"
+          title="FLY NON-STOP"
+          src="{% static 'index_img/fly-non-stop-image.webp' %}"
+        />
+        <div class="card-img-overlay">
+          <div class="container-bs">
+            <div class="row">
+              <div class="col-6 offset-6">
+                <h2 class="card-title">FLY</h2>
+                <h3 class="card-title">Nonstop</h3>
+                <p class="card-title">
+                  Spend less time getting there, and more time being there. Our
+                  nonstop network connects India with destinations in Asia,
+                  Australia, Europe, Middle East, North America, and more
+                </p>
+                <a href="" id="cardBannerLink" class="learn-more-button">
+                  Explore Routes
+                </a>
+              </div>
             </div>
           </div>
         </div>
