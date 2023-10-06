@@ -30,51 +30,57 @@ def search_Flights(request):
         return HttpResponse('nothing')
 
 
-# def passenger_data(request):
-#     p_data = passengers.objects.all()
-#     p_forms = show_passengers_data()
-#     if request.method == 'POST':
-#         forms_data = show_passengers_data(request.POST)
-#         if forms_data.is_valid():
-#             # model_=passengers.objects.get(pk=id)
-#             forms_data.save()
-#             p_forms = show_passengers_data()
-#     else:
-#         p_forms = show_passengers_data()
-#     return render(request, 'base.html', context={'pdata': p_data, 'pforms': p_forms})
+def passenger_data(request):
+    p_data = passengers.objects.all()
+    p_forms = show_passengers_data()
+    if request.method == 'POST':
+        forms_data = show_passengers_data(request.POST)
+        if forms_data.is_valid():
+            # model_=passengers.objects.get(pk=id)
+            forms_data.save()
+            p_forms = show_passengers_data()
+    else:
+        p_forms = show_passengers_data()
+    return render(request, 'all_data.html', context={'pdata': p_data, 'pforms': p_forms})
 
 
-# def passenger_data_update(request, id):
-#     if request.method == 'POST':
-#         model_ = passengers.objects.get(pk=id)
-#         p_forms = show_passengers_data(request.POST, instance=model_)
-#         if p_forms.is_valid():
-#             p_forms.save()
-#             # p_forms = show_passengers_data()
-#         return redirect('home')
-#     else:
-#         model_ = passengers.objects.get(pk=id)
-#         # p_forms = show_passengers_data()
-#         p_forms = show_passengers_data(instance=model_)
-#     return render(request, 'update.html', context={'pforms': p_forms})
+def passenger_data_update(request, id):
+    if request.method == 'POST':
+        model_ = passengers.objects.get(pk=id)
+        p_forms = show_passengers_data(request.POST, instance=model_)
+        if p_forms.is_valid():
+            p_forms.save()
+            # p_forms = show_passengers_data()
+        return redirect('home')
+    else:
+        model_ = passengers.objects.get(pk=id)
+        # p_forms = show_passengers_data()
+        p_forms = show_passengers_data(instance=model_)
+    return render(request, 'update.html', context={'pforms': p_forms})
 
 
-# def Delete(request, id):
-#     if request.method == 'POST':
-#         model_ = passengers.objects.get(pk=id)
-#         model_.save()
-#         model_.delete()
-#         return redirect('home')
+def Delete(request, id):
+    if request.method == 'POST':
+        model_ = passengers.objects.get(pk=id)
+        model_.save()
+        model_.delete()
+        return redirect('home')
 
 # business page render
+
+
 def business_page(request):
-    return render(request,'business.html')
+    return render(request, 'business.html')
 
 # service page render
+
+
 def service_page(request):
-    return render(request,'service.html')
+    return render(request, 'service.html')
 
 # all profile
+
+
 def all_profile(request):
     data = passengers.objects.all()
-    return render(request,'profile.html',{'data':data})
+    return render(request, 'profile.html', {'data': data})
