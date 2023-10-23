@@ -6,7 +6,7 @@
   crossorigin="anonymous"
 />
 
-<div class="container-fluid">
+<div class="container-fluid p-0">
   <img
     src="{% static 'index_img/air.jpg' %}"
     alt=""
@@ -14,11 +14,18 @@
     class="img-fluid position-relative"
     style="width: 100%; height: 600px"
   />
-  <div class="container position-absolute top-50 start-0 ms-5">
-    <h1 class="fw-semibold">COMFORT by your side</h1>
-    <p class="fw-medium">Book a preferred seat next to you</p>
-    <button class="fw-semibold">LEARN MORE</button>
-    <h6>*T&C apply</h6>
+  <div
+    class="container position-absolute top-0 start-0 ms-5"
+    style="margin-top: 20%"
+  >
+    <h1 class="fw-semibold text-light bg-primary rounded-2 p-1 opacity-75">
+      COMFORT by your side
+    </h1>
+    <p class="fw-medium text-light bg-primary rounded-2 p-1 opacity-75">
+      Book a preferred seat next to you
+    </p>
+    <button class="fw-semibold text-light btn btn-secondary">LEARN MORE</button>
+    <h6 class="text-danger">*T&C apply</h6>
   </div>
 </div>
 <div class="container border border-dark border-1 rounded-4 p-2">
