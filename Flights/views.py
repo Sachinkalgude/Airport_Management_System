@@ -85,3 +85,36 @@ def service_page(request):
 # index
 def main_page(request):
     return render(request,'index.html')
+
+# crud for flights data
+
+def add_flight(request):
+    if request.method == 'POST':
+        form = flights_form(request.POST)
+        if form.is_valid():
+            form.save()
+            form = flights_form()
+    else:
+        form = flights_form()
+    return render(request,'add_flight.html',context={'add_form':form})
+
+def show_flight(request):
+    all = Flights.objects.all()
+    return render(request, 'all_flights.html', context={'fg': all})
+
+def flight_update(request,Flight_no):
+    if request.method=="POST":
+        edit= Flights.objects.get(pk=Flight_no)
+        edit_form = flights_form(request.POST,instance=edit)
+        if edit_form.is_valid():
+            edit_form.save()
+    else:
+        edit = Flights.objects.get(pk=Flight_no)
+        edit_form = flights_form(instance=edit)
+    return render(request,'update_flight.html',context={'edit_form':edit_form})
+
+def delete_flight(request,Flight_no):
+    if request.method == "POST":
+        data = Flights.objects.get(pk=Flight_no)
+        data.delete()
+        return redirect('show_all_flights')

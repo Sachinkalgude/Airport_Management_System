@@ -9,6 +9,10 @@ from .views import (
     business_page,
     service_page,
     main_page,
+    add_flight,
+    show_flight,
+    flight_update,
+    delete_flight,
 )
 
 
@@ -26,5 +30,13 @@ urlpatterns = [
     # service page
     path('service_page/', service_page, name='servicepage'),
     #main page
-    path('home_page/',main_page,name="HOME")
+    path('home_page/',main_page,name="HOME"),
+    #add flight
+    path('add_flight/',add_flight,name="add_flight"),
+    #show flight
+    path('flights/',show_flight,name="show_all_flights"),
+    # flight update
+    path('<int:Flight_no>/',flight_update,name='flight_update'),
+    # flight delete
+    path('flight_delete/<int:Flight_no>/',delete_flight,name='delete_flight'),
 ]
