@@ -5,6 +5,7 @@
   integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
   crossorigin="anonymous"
 />
+<h2 class="text-center text-primary my-5">Flights</h2>
 {% if fg %}
 <table class="table table-secondary table-striped my-5">
   <thead>
@@ -17,6 +18,7 @@
       <th scope="col">Arrival_time</th>
       <th scope="col">Departure_time</th>
       <th scope="col">Flight_price</th>
+      <th scope="col">Booking</th>
     </tr>
   </thead>
   <tbody>
@@ -30,6 +32,8 @@
       <td>{{st.Departure_time}}</td>
       <td>{{st.Arrival_time}}</td>
       <td>{{st.Flight_price}}</td>
+      <td>
+        <a href="" class="btn btn-success btn-md">Book</a>
       </td>
     </tr>
     {% endfor %}

@@ -81,3 +81,7 @@ def business_page(request):
 
 def service_page(request):
     return render(request, 'service.html')
+
+# index
+def main_page(request):
+    return render(request,'index.html')

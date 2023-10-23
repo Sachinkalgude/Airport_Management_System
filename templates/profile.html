@@ -13,7 +13,7 @@
 <table class="table table-secondary table-striped my-5">
   <thead>
     <tr>
-      <th scope="col">username</th>
+      {% comment %} <th scope="col">username</th> {% endcomment %}
       <th scope="col">email</th>
       <th scope="col">Type</th>
       <th scope="col">first_name</th>
@@ -25,7 +25,7 @@
   <tbody>
     {% comment %} {% for dt in sl %} {% endcomment %}
     <tr>
-      <td>{{sl.username}}</td>
+      {% comment %} <td>{{sl.username}}</td> {% endcomment %}
       <td>{{sl.email}}</td>
       <td>{{sl.Type}}</td>
       <td>{{sl.first_name}}</td>
