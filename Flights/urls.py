@@ -8,7 +8,6 @@ from .views import (
     search_Flights,
     business_page,
     service_page,
-    all_profile,
 )
 
 
@@ -25,6 +24,4 @@ urlpatterns = [
     path('business_page/', business_page, name='businesspage'),
     # service page
     path('service_page/', service_page, name='servicepage'),
-    # profile page
-    path('profile/', all_profile, name='allprofile'),
 ]

@@ -22,9 +22,18 @@
   </div>
 </div>
 <div class="container border border-dark border-1 rounded-4 p-2">
-  <p class="fw-medium">Book a Flight</p>
-  <form action="" method="POST">
-    {% csrf_token %} {{fs.Base}}{{fs.Destination}}
+  <p class="fw-medium">Search Flight</p>
+  <form action="" method="get">
+    <div
+      class="custom-css-control border border-1 border-dark w-25 rounded-4 p-1"
+    >
+      {{fs.Base}}
+    </div>
+    <div
+      class="custom-css-control border border-1 border-dark w-25 rounded-4 p-1"
+    >
+      {{fs.Destination}}
+    </div>
     <div
       class="custom-css-control border border-1 border-dark w-25 rounded-4 p-1"
     >
@@ -33,9 +42,10 @@
     <div
       class="custom-css-control border border-1 border-dark w-25 rounded-4 p-1"
     >
-      Return : {{fs.Arrival_time}}
+      Arrive : {{fs.Arrival_time}}
     </div>
-    <button type="submit" class="btn btn-success">Search</button>
+    <br />
+    <button class="btn btn-success" type="submit" name="search">Search</button>
   </form>
 </div>
 <!-- 2nd -->
@@ -131,7 +141,7 @@
   </div>
   <br />
   <!-- 4th -->
-  <div class="cardBanner aem-GridColumn aem-GridColumn--default--12">
+  <div class="cardBanner aem-GridColumn aem-GridColumn--default--12 text-light">
     <div class="cardBanner imgRight">
       <div class="card">
         <img
@@ -143,16 +153,20 @@
         />
         <div class="card-img-overlay">
           <div class="container-bs">
-            <div class="row">
+            <div class="row m-5 p-5">
               <div class="col-6 offset-6">
-                <h2 class="card-title">FLY</h2>
-                <h3 class="card-title">Nonstop</h3>
-                <p class="card-title">
+                <h2 class="card-title text-light">FLY</h2>
+                <h3 class="card-title text-light">Nonstop</h3>
+                <p class="card-title text-light">
                   Spend less time getting there, and more time being there. Our
                   nonstop network connects India with destinations in Asia,
                   Australia, Europe, Middle East, North America, and more
                 </p>
-                <a href="" id="cardBannerLink" class="learn-more-button">
+                <a
+                  href=""
+                  id="cardBannerLink"
+                  class="learn-more-button text-light"
+                >
                   Explore Routes
                 </a>
               </div>

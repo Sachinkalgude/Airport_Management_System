@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import sign_up_form
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # usercreationform is used to sign up or create user.
@@ -31,7 +32,24 @@ def login_user(request):
             user_cr = authenticate(username=uname, password=upass)
             if user_cr is not None:
                 login(request, user_cr)
-                return redirect('home')
+                return redirect('profile_us')
     else:
         fm = AuthenticationForm()
     return render(request, 'sign-in.html', context={'fm': fm})
+
+
+def user_profile(request):
+    if request.user.is_authenticated:
+        sl = sign_up_form(instance=request.user)
+        # print(f'{sl} is auth')
+        return render(request, 'profile.html', {'First_name': request.user,'sl':sl})
+    else:
+        return redirect('login')
+
+
+
+def log_out(request):
+    logout(request)
+    return redirect('login')
+
+

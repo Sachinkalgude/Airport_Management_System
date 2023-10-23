@@ -19,5 +19,5 @@ class user(AbstractUser):
     Where_do_you_live = models.CharField(max_length=100)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = []
     objects = user_manager()

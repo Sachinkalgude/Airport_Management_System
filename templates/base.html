@@ -65,15 +65,19 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="{% url 'servicepage' %}">Services</a>
+                  <a class="nav-link text-light" href="{% url 'servicepage' %}"
+                    >Services</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="{% url 'businesspage' %}">Buisness</a>
+                  <a class="nav-link text-light" href="{% url 'businesspage' %}"
+                    >Buisness</a
+                  >
                 </li>
                 <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle text-light"
-                    href="#"
+                    href="{% url 'profile_us' %}"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -81,9 +85,15 @@
                     Profile
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Your Flights</a></li>
                     <li>
-                      <a class="dropdown-item" href="#">Log-out</a>
+                      <a class="dropdown-item" href="{% url 'profile_us' %}"
+                        >Your profile</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="{% url 'logout_user' %}"
+                        >Log-out</a
+                      >
                     </li>
                     <li>
                       <hr class="dropdown-divider" />

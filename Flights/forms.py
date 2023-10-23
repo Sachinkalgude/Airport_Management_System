@@ -10,12 +10,10 @@ class flights_form(forms.ModelForm):
         widget=forms.TextInput(attrs={'class': 'form-control'}))
     no_of_seats = forms.IntegerField(
         widget=forms.NumberInput(attrs={'class': 'form-control'}))
-    Base = forms.CharField(label='From', widget=forms.TextInput(
-        attrs={'class': 'custom-css-control', 'placeholder': 'From'}))
+    Base = forms.CharField(widget=forms.TextInput(attrs={'class': 'custom-css-control', 'placeholder': 'From'}))
     Base_code = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}))
-    Destination = forms.CharField(label="To",
-                                  widget=forms.TextInput(attrs={'class': 'custom-css-control', 'placeholder': 'To'}))
+    Destination = forms.CharField(widget=forms.TextInput(attrs={'class': 'custom-css-control', 'placeholder': 'To'}))
     Destination_code = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control'}))
     Arrival_time = forms.DateTimeField(

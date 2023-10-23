@@ -3,6 +3,7 @@ from .forms import show_passengers_data, flights_form
 from .models import passengers, Flights
 from django.http import HttpResponseRedirect, HttpResponse
 from django.db.models import Q
+from Authentication_App.models import user
 # Create your views here.
 
 
@@ -23,11 +24,14 @@ def flight_show(request):
 
 
 def search_Flights(request):
-    if request.method == 'POST':
-        base = request.POST.get('Base')
-        return HttpResponse(f'{base}')
+    if request.method == 'GET':
+        base = request.GET.get('Base')
+        destination = request.GET.get('Destination')
+        print(base)
+        print(destination)
+        return render(request,'search_flights.html',context={'base':base,'destination':destination})
     else:
-        return HttpResponse('nothing')
+        return redirect('home')
 
 
 def passenger_data(request):
@@ -77,10 +81,3 @@ def business_page(request):
 
 def service_page(request):
     return render(request, 'service.html')
-
-# all profile
-
-
-def all_profile(request):
-    data = passengers.objects.all()
-    return render(request, 'profile.html', {'data': data})
