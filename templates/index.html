@@ -28,7 +28,8 @@
     <h6 class="text-danger">*T&C apply</h6>
   </div>
 </div>
-{% comment %} <div class="container border border-dark border-1 rounded-4 p-2">
+{% comment %}
+<div class="container border border-dark border-1 rounded-4 p-2">
   <p class="fw-medium">Search Flight</p>
   <form action="" method="get">
     <div
@@ -54,10 +55,11 @@
     <br />
     <button class="btn btn-success" type="submit" name="search">Search</button>
   </form>
-</div> {% endcomment %}
+</div>
+{% endcomment %}
 <!-- 2nd -->
 <div class="sectionTitle aem-GridColumn aem-GridColumn--default--12">
-  <div class="container section-title">
+  <div class="container section-title mt-5">
     <h2>Prepare to Travel</h2>
     <p>
       From booking services to help in travel plans, you can expect a lot along
@@ -65,34 +67,62 @@
     </p>
   </div>
   <br />
-  <div class="container cardImage text">
-    <div class="card">
-      <div class="card d-flex">
-        <img
-          class="card h-25 w-25"
-          data-src="/adobe/dynamicmedia/deliver/dm-aid--cf91b67c-2b45-4cbe-8ed0-7e2de50c897a/generous-baggage-rules.webp"
-          alt="Baggage"
-          title="Baggage"
-          src="{% static 'index_img/airport-services.jpg' %}"
-        />
-        <img
-          class="card-img-top main-img child ls-is-cached lazyloaded h-25 w-25"
-          data-src="/adobe/dynamicmedia/deliver/dm-aid--c3f8b9d2-4542-416a-b753-2f18c9e4dca3/before-you-fly.webp"
-          alt="Essential Travel Requirements"
-          title="Essential Travel Requirements"
-          src="{% static 'index_img/fly-non-stop-image.webp' %}"
-        />
-        <img
-          class="card-img-top main-img child ls-is-cached lazyloaded h-25 w-25"
-          data-src="/adobe/dynamicmedia/deliver/dm-aid--cd2b6afe-8a61-4f91-b37a-b2652363d323/airport-information.webp"
-          alt="Airport Information"
-          title="Airport Information"
-          src="{% static 'index_img/lounges.jpg' %}"
-        />
+
+  <br />
+  <div class="card-deck container d-flex justify-content-center">
+    <div class="">
+      <img
+        class="card-img-top h-50"
+        src="{% static 'index_img/airport-services.jpg' %}"
+        alt="Card image cap"
+      />
+      <div class="card-body mt-5">
+        <h5 class="card-title">Hotels</h5>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer.
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="">
+      <img
+        class="card-img-top h-50"
+        src="{% static 'index_img/fly-non-stop-image.webp' %}"
+        alt="Card image cap"
+      />
+      <div class="card-body mt-5">
+        <h5 class="card-title">Tourists places</h5>
+        <p class="card-text">
+          This card has supporting text below as a natural lead-in to additional
+          content.
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="">
+      <img
+        class="card-img-top h-50"
+        src="{% static 'index_img/lounges.jpg' %}"
+        alt="Card image cap"
+      />
+      <div class="card-body mt-5">
+        <h5 class="card-title">Spa and Relax Centers</h5>
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This card has even longer content than the
+          first to show that equal height action.
+        </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
       </div>
     </div>
   </div>
-  <br />
   <!-- 3rd -->
   <div class="covid-info container">
     <div class="row">
@@ -100,7 +130,7 @@
         <div class="info-item">
           <h2 class="section-title">Covid-19 Information</h2>
           <div class="information-card">
-            <aside class="informationcardimage">
+            <aside class="informationcardimage mb-5">
               <p class="covidInfoText">
                 The global COVID-19 pandemic has had a significant impact on the
                 way we live our lives, including how we travel by air.
@@ -110,9 +140,9 @@
                 >Know More<i class="clr-arrow"></i
               ></a>
             </aside>
-            <figure>
+            <figure class="text-left">
               <img
-                class="w-75 img-fluid"
+                class="w-50 h-50 img-fluid"
                 src="{% static 'index_img/museum-tour.jpg' %}"
                 alt="CSMIA"
               />
@@ -124,7 +154,7 @@
         <div class="info-item">
           <h2 class="section-title">State Wise Regulation</h2>
           <div class="information-card">
-            <aside class="informationcardimage">
+            <aside class="informationcardimage mb-5">
               <p class="covidInfoText">
                 The global COVID-19 pandemic has had a significant impact on the
                 way we live our lives, including how we travel by air.
@@ -134,10 +164,10 @@
                 >Know More <i class="clr-arrow"></i
               ></a>
             </aside>
-            <figure>
+            <figure class="text-left">
               <img
                 src="{% static 'index_img/niranta-airport-transit-hotel.jpg' %}"
-                class="img-fluid w-75"
+                class="img-fluid w-50 h-50"
                 alt="CSMIA"
               />
             </figure>
