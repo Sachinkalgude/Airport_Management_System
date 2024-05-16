@@ -16,6 +16,7 @@ def sign_up(request):
         if fm.is_valid():
             fm.save()
             # messages.success()
+            return redirect('login')
     else:
         fm = sign_up_form()
     return render(request, 'Sign-up.html', context={'fm': fm})
