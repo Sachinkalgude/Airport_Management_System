@@ -106,4 +106,3 @@ whitenoise==4.1.4
 wikipedia==1.4.0
 wsproto==1.2.0
 setuptools==69.5.1
-distutils
